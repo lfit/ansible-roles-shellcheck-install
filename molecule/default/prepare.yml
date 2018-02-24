@@ -1,5 +1,18 @@
 ---
 - name: Prepare
   hosts: all
-  gather_facts: false
-  tasks: []
+  gather_facts: true
+  tasks:
+    - name: Install xz
+      yum:
+        name: xz
+        state: present
+      when: ansible_os_family == 'RedHat'
+      become: true
+
+    - name: Install xz
+      apt:
+        name: xz-utils
+        state: present
+      when: ansible_os_family == 'Debian'
+      become: true

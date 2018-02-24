@@ -11,7 +11,9 @@ None.
 Role Variables
 --------------
 
-None.
+shellcheck_checksum: checksum of shellcheck archive.
+shellcheck_version: version of shellcheck to install.
+
 
 Dependencies
 ------------
