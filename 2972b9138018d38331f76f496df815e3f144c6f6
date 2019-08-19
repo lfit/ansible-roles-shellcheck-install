@@ -1,0 +1,8 @@
+Verified+1: Jenkins CI <releng+lf-jenkins@linuxfoundation.org>
+Code-Review+1: Thanh Ha (zxiiro) <zxiiro@gmail.com>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Mon, 19 Aug 2019 21:47:03 +0000
+Reviewed-on: https://gerrit.linuxfoundation.org/infra/c/ansible/roles/shellcheck-install/+/16577
+Project: ansible/roles/shellcheck-install
+Branch: refs/heads/master
