@@ -25,7 +25,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: lfit.shellcheck }
+         - { role: lfit.shellcheck-install }
 
 License
 -------
