@@ -1,7 +1,7 @@
 ---
 - name: Fetch ShellCheck
   get_url:
-    url: 'https://storage.googleapis.com/shellcheck/shellcheck-{{ shellcheck_version }}.linux.x86_64.tar.xz'
+    url: 'https://github.com/koalaman/shellcheck/releases/download/{{ shellcheck_version }}/shellcheck-{{ shellcheck_version }}.linux.x86_64.tar.xz'
     dest: /tmp/shellcheck.tar.xz
     checksum: '{{ shellcheck_checksum }}'
   become: true
