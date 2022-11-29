@@ -1,4 +1,5 @@
-# UUID                                                                                         	Group Name
+# UUID                                  	Group Name
 #
-54984521d860560b3304eecaae54a134c18eb373                                                       	saml/lf-gerrit-ansible-roles-shellcheck-install-committers
-d68d00a2419f8ff627fc120cf9dd9055ae422153                                                       	GitHub Replication
+54984521d860560b3304eecaae54a134c18eb373	saml/lf-gerrit-ansible-roles-shellcheck-install-committers
+824623e509ec71c6574dad386e59e709eaedd178	Gitlab Replication
+d68d00a2419f8ff627fc120cf9dd9055ae422153	GitHub Replication
