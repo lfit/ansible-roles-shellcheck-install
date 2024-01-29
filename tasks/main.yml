@@ -12,6 +12,8 @@
     dest: /tmp
     list_files: true
     remote_src: true
+    extra_opts:
+     - '-z'
   become: true
 
 - name: Install ShellCheck to /usr/local/bin/shellcheck
