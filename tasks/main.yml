@@ -1,13 +1,14 @@
 ---
 - name: Fetch ShellCheck
-  get_url:
+  ansible.builtin.get_url:
     url: 'https://github.com/koalaman/shellcheck/releases/download/{{ shellcheck_version }}/shellcheck-{{ shellcheck_version }}.linux.x86_64.tar.xz'
     dest: /tmp/shellcheck.tar.xz
     checksum: '{{ shellcheck_checksum }}'
+    mode: 0644
   become: true
 
 - name: Unpack ShellCheck
-  unarchive:
+  ansible.builtin.unarchive:
     src: /tmp/shellcheck.tar.xz
     dest: /tmp
     list_files: true
@@ -15,7 +16,7 @@
   become: true
 
 - name: Install ShellCheck to /usr/local/bin/shellcheck
-  copy:
+  ansible.builtin.copy:
     src: '/tmp/shellcheck-{{ shellcheck_version }}/shellcheck'
     dest: /usr/local/bin/shellcheck
     mode: 0755
