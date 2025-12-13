@@ -1,5 +1,25 @@
 ---
 - name: Prepare
   hosts: all
-  gather_facts: false
-  tasks: []
+  gather_facts: true
+  tasks:
+    - name: Install curl, CA certs, and xz-utils for Ubuntu
+      apt:
+        name:
+          - curl
+          - ca-certificates
+          - xz-utils
+        state: present
+        update_cache: yes
+      when: ansible_facts['distribution'] == 'Ubuntu'
+      become: true
+
+    - name: Install curl, CA certs, and xz for CentOS
+      yum:
+        name:
+          - curl
+          - ca-certificates
+          - xz
+        state: present
+      when: ansible_facts['os_family'] == 'RedHat'
+      become: true
